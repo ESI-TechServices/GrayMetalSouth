@@ -2363,7 +2363,7 @@ Please report any receiving discrepancies within 24 hours at 1-910-892-2119. The
                                     <RightBorder>
                                       <Style>Solid</Style>
                                     </RightBorder>
-                                    <BackgroundColor>=iif(Fields!PartNum_RefCategory.Value = "SPLNON", "Yellow", "Transparent")</BackgroundColor>
+                                    <BackgroundColor>=iif(Fields!PartNum_RefCategory.Value = "SPLNON" or Fields!PartNum_RefCategory.Value = "MTO", "Yellow", "Transparent")</BackgroundColor>
                                     <VerticalAlign>Middle</VerticalAlign>
                                   </Style>
                                 </Textbox>
