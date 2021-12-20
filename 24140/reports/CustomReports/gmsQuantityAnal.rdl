@@ -4201,7 +4201,7 @@ Inner Join dbo.[BAQReportParameter_" + Parameters!TableGuid.Value + "] rp on rr.
           </Border>
         </Style>
       </Body>
-      <Width>13.164in</Width>
+      <Width>10.688in</Width>
       <Page>
         <PageHeader>
           <Height>0.82167in</Height>
