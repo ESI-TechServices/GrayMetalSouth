@@ -12,7 +12,7 @@
     <DataSet Name="OrderHed">
       <Query>
         <DataSourceName>dsSOPickL</DataSourceName>
-        <CommandText>="SELECT T9.PartNum as PartUOMPARTNum, T9.UOMCode as PartUOMCode, T9.NetVolume as BoxVolume, T1.OrderNum, T1.Calc_BCCustNum,T1.Calc_BCOrderNum,T1.Calc_CustID,T1.Calc_CustName,T1.Calc_HeadComment, T2.DisplaySeq,T2.KitFlag,T2.KitShipComplete,T2.LineDesc,CAST( T2.OrderLine as nvarchar ) as OrderLine,CAST( T2.OrderNum as nvarchar ) as OrderDtl_OrderNum,T2.PartNum,T2.PickListComment,T2.RevisionNum,T2.Calc_BCLineNum,T2.Calc_BCPart,T2.Calc_BCRev,T2.Calc_UOM, T2.Calc_KitPartNum,T3.OrderRelNum,CAST( T3.ReqDate as nvarchar ) as ReqDate,T3.ShipToNum,T3.ShipViaCode,T3.Calc_BCRelNum,T3.Calc_RelQty,T3.Calc_Source, T4.JobNum, T5.RptLiteralsLOf,T5.RptLiteralsLBin as BinNum,T5.Calc_LotNum,T5.RptLiteralsLAllocQty,T5.RptLiteralsLComponents,T5.RptLiteralsLDate,T5.RptLiteralsLDimCode,T5.RptLiteralsLJob,T5.RptLiteralsLKit,T5.RptLiteralsLKitSeq,T5.RptLiteralsLLine,T5.RptLiteralsLOnHand,T5.RptLiteralsLPage,T5.RptLiteralsLPickFrm,T5.RptLiteralsLQtyShip,T5.RptLiteralsLRel,T5.RptLiteralsLRelQty,T5.RptLiteralsLShipTo,T5.RptLiteralsLShipVia,T5.RptLiteralsLUOM,T5.RptLiteralsLWhse,T5.RptLiteralsRptTitle,T5.OrderNum as RptLabelsOrderNum, T5.CustNum, T5.PartNum as RptLabelsPartNum, T5.RevisionNum as RptLabelsRevisionNum, T5.RptLiteralsTime, 
+        <CommandText>="SELECT T10.NetWeight, T10.gmsSortCode_c, T10.ProductLoadOrder_c, T9.PartNum as PartUOMPARTNum, T9.UOMCode as PartUOMCode, T9.NetVolume as BoxVolume, T1.OrderNum, T1.Calc_BCCustNum,T1.Calc_BCOrderNum,T1.Calc_CustID,T1.Calc_CustName,T1.Calc_HeadComment, T2.DisplaySeq,T2.KitFlag,T2.KitShipComplete,T2.LineDesc,CAST( T2.OrderLine as nvarchar ) as OrderLine,CAST( T2.OrderNum as nvarchar ) as OrderDtl_OrderNum,T2.PartNum,T2.PickListComment,T2.RevisionNum,T2.Calc_BCLineNum,T2.Calc_BCPart,T2.Calc_BCRev,T2.Calc_UOM, T2.Calc_KitPartNum,T3.OrderRelNum,CAST( T3.ReqDate as nvarchar ) as ReqDate,T3.ShipToNum,T3.ShipViaCode,T3.Calc_BCRelNum,T3.Calc_RelQty,T3.Calc_Source, T4.JobNum, T5.RptLiteralsLOf,T5.RptLiteralsLBin as BinNum,T5.Calc_LotNum,T5.RptLiteralsLAllocQty,T5.RptLiteralsLComponents,T5.RptLiteralsLDate,T5.RptLiteralsLDimCode,T5.RptLiteralsLJob,T5.RptLiteralsLKit,T5.RptLiteralsLKitSeq,T5.RptLiteralsLLine,T5.RptLiteralsLOnHand,T5.RptLiteralsLPage,T5.RptLiteralsLPickFrm,T5.RptLiteralsLQtyShip,T5.RptLiteralsLRel,T5.RptLiteralsLRelQty,T5.RptLiteralsLShipTo,T5.RptLiteralsLShipVia,T5.RptLiteralsLUOM,T5.RptLiteralsLWhse,T5.RptLiteralsRptTitle,T5.OrderNum as RptLabelsOrderNum, T5.CustNum, T5.PartNum as RptLabelsPartNum, T5.RevisionNum as RptLabelsRevisionNum, T5.RptLiteralsTime, 
  T1.Customer_Name, T1.Customer_Address1, T1.Customer_City, T1.Customer_State, T1.Customer_Zip, T1.Customer_PhoneNum, T1.Customer_FaxNum, T6.Name, T6.Address1, T6.City, T6.State, T6.Zip, T6.PhoneNum, T6.FaxNum, 
  T1.OrderDate, T1.PONum, T1.ShipViaCode_Description, T1.NeedByDate, T1.RequestDate, T2.OrderQty, T2.PartNum_RefCategory, T1.UseOTS, T9.ConvFactor, T9.ConvOperator, CEILING(iif(  T9.ConvOperator = '*' and T9.ConvFactor &gt; 0, T3.Calc_RelQty/T9.ConvFactor , T3.Calc_RelQty * T9.ConvFactor)) as Box, 
  T1.OTSName, T1.OTSCity, T1.OTSZip, T1.OTSPhoneNum, T1.OTSFaxNum, T1.OTSAddress1, T1.OTSState, T1.Customer_gmsShippingNotes_c, T6.gmsShippingNotes_c , T2.DocUnitPrice, T1.OrderComment, T1.PickListComment As HedPickListComment, Case When T1.UseOTS = 0 Then 
@@ -57,7 +57,10 @@ LEFT OUTER JOIN ShipTo_" + Parameters!TableGuid.Value + " T6
   ON T1.Company = T6.Company AND T1.ShipToCustNum = T6.CustNum AND T1.ShipToNum = T6.ShipToNum
  
 LEFT OUTER JOIN PartUOM_" + Parameters!TableGuid.Value + " T9
-  ON T2.Company = T9.Company AND T2.PartNum = T9.PartNum"</CommandText>
+  ON T2.Company = T9.Company AND T2.PartNum = T9.PartNum
+  
+LEFT OUTER JOIN Part_" + Parameters!TableGuid.Value + " T10
+  ON T2.Company = T10.Company AND T2.PartNum = T10.PartNum"</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <Fields>
@@ -448,6 +451,21 @@ LEFT OUTER JOIN PartUOM_" + Parameters!TableGuid.Value + " T9
         <Field Name="BoxVolume">
           <DataField>BoxVolume</DataField>
           <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="NetWeight">
+          <DataField>NetWeight</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="gmsSortCode_c">
+          <DataField>gmsSortCode_c</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="ProductLoadOrder_c">
+          <DataField>ProductLoadOrder_c</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="LineNetWeight">
+          <Value>=Fields!Calc_RelQty.Value *Fields!NetWeight.Value</Value>
         </Field>
       </Fields>
     </DataSet>
@@ -2053,7 +2071,7 @@ LEFT OUTER JOIN PartUOM_" + Parameters!TableGuid.Value + " T9
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>Order</Value>
+                                      <Value>Ord</Value>
                                       <Style>
                                         <FontFamily>Arial Unicode MS</FontFamily>
                                         <FontWeight>Bold</FontWeight>
@@ -2067,7 +2085,7 @@ LEFT OUTER JOIN PartUOM_" + Parameters!TableGuid.Value + " T9
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>Quantity</Value>
+                                      <Value>Qty</Value>
                                       <Style>
                                         <FontFamily>Arial Unicode MS</FontFamily>
                                         <FontWeight>Bold</FontWeight>
@@ -2173,7 +2191,7 @@ LEFT OUTER JOIN PartUOM_" + Parameters!TableGuid.Value + " T9
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>Customer</Value>
+                                      <Value>Load</Value>
                                       <Style>
                                         <FontFamily>Arial Unicode MS</FontFamily>
                                         <FontWeight>Bold</FontWeight>
@@ -2187,7 +2205,7 @@ LEFT OUTER JOIN PartUOM_" + Parameters!TableGuid.Value + " T9
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>Part</Value>
+                                      <Value>Order</Value>
                                       <Style>
                                         <FontFamily>Arial Unicode MS</FontFamily>
                                         <FontWeight>Bold</FontWeight>
@@ -2545,7 +2563,7 @@ LEFT OUTER JOIN PartUOM_" + Parameters!TableGuid.Value + " T9
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value>=Fields!XPartNum.Value</Value>
+                                          <Value>=First(Fields!ProductLoadOrder_c.Value)</Value>
                                           <Style>
                                             <FontFamily>Arial Unicode MS</FontFamily>
                                             <FontSize>8pt</FontSize>
@@ -3027,7 +3045,11 @@ LEFT OUTER JOIN PartUOM_" + Parameters!TableGuid.Value + " T9
                       </Group>
                       <SortExpressions>
                         <SortExpression>
-                          <Value>=StrDup(4-len(CStr(Fields!OrderLine.Value)), "0") + CStr(Fields!OrderLine.Value)</Value>
+                          <Value>=Fields!ProductLoadOrder_c.Value</Value>
+                        </SortExpression>
+                        <SortExpression>
+                          <Value>=Fields!LineNetWeight.Value</Value>
+                          <Direction>Descending</Direction>
                         </SortExpression>
                       </SortExpressions>
                       <TablixMembers>
