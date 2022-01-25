@@ -1910,7 +1910,8 @@ LEFT OUTER JOIN Part_" + Parameters!TableGuid.Value + " T10
                                   </Style>
                                 </Paragraph>
                               </Paragraphs>
-                              <Left>1.79431in</Left>
+                              <Top>0.01334in</Top>
+                              <Left>1.43056in</Left>
                               <Height>0.32533in</Height>
                               <Width>1.31725in</Width>
                               <ZIndex>1</ZIndex>
@@ -2099,7 +2100,7 @@ LEFT OUTER JOIN Part_" + Parameters!TableGuid.Value + " T10
                               </Paragraphs>
                               <Left>0.3975in</Left>
                               <Height>0.32533in</Height>
-                              <Width>0.69714in</Width>
+                              <Width>0.52437in</Width>
                               <ZIndex>5</ZIndex>
                               <Style>
                                 <Border>
@@ -2143,7 +2144,7 @@ LEFT OUTER JOIN Part_" + Parameters!TableGuid.Value + " T10
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>Quantity</Value>
+                                      <Value>Qty</Value>
                                       <Style>
                                         <FontFamily>Arial Unicode MS</FontFamily>
                                         <FontWeight>Bold</FontWeight>
@@ -2156,9 +2157,9 @@ LEFT OUTER JOIN Part_" + Parameters!TableGuid.Value + " T10
                                 </Paragraph>
                               </Paragraphs>
                               <Top>0.01389in</Top>
-                              <Left>1.09464in</Left>
+                              <Left>0.92187in</Left>
                               <Height>0.32478in</Height>
-                              <Width>0.69967in</Width>
+                              <Width>0.4948in</Width>
                               <ZIndex>6</ZIndex>
                               <Style>
                                 <Border>
@@ -2217,10 +2218,71 @@ LEFT OUTER JOIN Part_" + Parameters!TableGuid.Value + " T10
                                   </Style>
                                 </Paragraph>
                               </Paragraphs>
-                              <Left>3.11156in</Left>
+                              <Top>0.00055in</Top>
+                              <Left>2.74781in</Left>
                               <Height>0.32533in</Height>
-                              <Width>0.7351in</Width>
+                              <Width>0.61858in</Width>
                               <ZIndex>7</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <TopBorder>
+                                  <Style>None</Style>
+                                </TopBorder>
+                                <BottomBorder>
+                                  <Style>None</Style>
+                                </BottomBorder>
+                                <LeftBorder>
+                                  <Color>Black</Color>
+                                  <Style>None</Style>
+                                  <Width>1pt</Width>
+                                </LeftBorder>
+                                <RightBorder>
+                                  <Color>Black</Color>
+                                  <Style>None</Style>
+                                  <Width>1pt</Width>
+                                </RightBorder>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="LblOrderDate13">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Line</Value>
+                                      <Style>
+                                        <FontFamily>Arial Unicode MS</FontFamily>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Wgt</Value>
+                                      <Style>
+                                        <FontFamily>Arial Unicode MS</FontFamily>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.00055in</Top>
+                              <Left>3.38142in</Left>
+                              <Height>0.32533in</Height>
+                              <Width>0.49699in</Width>
+                              <ZIndex>8</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -2306,7 +2368,7 @@ LEFT OUTER JOIN Part_" + Parameters!TableGuid.Value + " T10
                                       </Style>
                                     </Paragraph>
                                   </Paragraphs>
-                                  <Left>1.79431in</Left>
+                                  <Left>1.41667in</Left>
                                   <Height>0.24291in</Height>
                                   <Width>1.31725in</Width>
                                   <Style>
@@ -2460,7 +2522,7 @@ LEFT OUTER JOIN Part_" + Parameters!TableGuid.Value + " T10
                                   </Paragraphs>
                                   <Left>0.3975in</Left>
                                   <Height>0.24291in</Height>
-                                  <Width>0.69714in</Width>
+                                  <Width>0.52437in</Width>
                                   <ZIndex>4</ZIndex>
                                   <Style>
                                     <Border>
@@ -2535,9 +2597,9 @@ LEFT OUTER JOIN Part_" + Parameters!TableGuid.Value + " T10
                                       </Style>
                                     </Paragraph>
                                   </Paragraphs>
-                                  <Left>1.09464in</Left>
+                                  <Left>0.92187in</Left>
                                   <Height>0.24291in</Height>
-                                  <Width>0.69967in</Width>
+                                  <Width>0.4948in</Width>
                                   <ZIndex>6</ZIndex>
                                   <Style>
                                     <Border>
@@ -2563,7 +2625,7 @@ LEFT OUTER JOIN Part_" + Parameters!TableGuid.Value + " T10
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value>=First(Fields!ProductLoadOrder_c.Value)</Value>
+                                          <Value>=Fields!ProductLoadOrder_c.Value</Value>
                                           <Style>
                                             <FontFamily>Arial Unicode MS</FontFamily>
                                             <FontSize>8pt</FontSize>
@@ -2572,14 +2634,54 @@ LEFT OUTER JOIN Part_" + Parameters!TableGuid.Value + " T10
                                         </TextRun>
                                       </TextRuns>
                                       <Style>
-                                        <TextAlign>Left</TextAlign>
+                                        <TextAlign>Center</TextAlign>
                                       </Style>
                                     </Paragraph>
                                   </Paragraphs>
-                                  <Left>3.11156in</Left>
+                                  <Left>2.73142in</Left>
                                   <Height>0.24291in</Height>
-                                  <Width>0.7351in</Width>
+                                  <Width>0.61858in</Width>
                                   <ZIndex>7</ZIndex>
+                                  <Style>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <LeftBorder>
+                                      <Color>Black</Color>
+                                      <Style>Solid</Style>
+                                      <Width>1pt</Width>
+                                    </LeftBorder>
+                                    <RightBorder>
+                                      <Color>Black</Color>
+                                      <Style>Solid</Style>
+                                      <Width>1pt</Width>
+                                    </RightBorder>
+                                    <VerticalAlign>Middle</VerticalAlign>
+                                  </Style>
+                                </Textbox>
+                                <Textbox Name="LblInvoiceLine32">
+                                  <KeepTogether>true</KeepTogether>
+                                  <Paragraphs>
+                                    <Paragraph>
+                                      <TextRuns>
+                                        <TextRun>
+                                          <Value>=Fields!LineNetWeight.Value</Value>
+                                          <Style>
+                                            <FontFamily>Arial Unicode MS</FontFamily>
+                                            <FontSize>8pt</FontSize>
+                                            <Format>0;(0)</Format>
+                                          </Style>
+                                        </TextRun>
+                                      </TextRuns>
+                                      <Style>
+                                        <TextAlign>Center</TextAlign>
+                                      </Style>
+                                    </Paragraph>
+                                  </Paragraphs>
+                                  <Left>3.35in</Left>
+                                  <Height>0.24291in</Height>
+                                  <Width>0.49666in</Width>
+                                  <ZIndex>8</ZIndex>
                                   <Style>
                                     <Border>
                                       <Style>None</Style>
