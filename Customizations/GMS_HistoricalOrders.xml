@@ -1,0 +1,607 @@
+<?xml version="1.0" standalone="yes"?>
+<GenXDataDataSet xmlns="http://www.epicor.com/Ice/300/BO/GenXData/GenXData">
+  <xs:schema id="GenXDataDataSet" targetNamespace="http://www.epicor.com/Ice/300/BO/GenXData/GenXData" xmlns:mstns="http://www.epicor.com/Ice/300/BO/GenXData/GenXData" xmlns="http://www.epicor.com/Ice/300/BO/GenXData/GenXData" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:element name="GenXDataDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:ExportFormat="Gen3" msprop:IsMain="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="XXXDef" msprop:SchemaName="Ice">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Company" msprop:ReadOnly="True" msprop:Like="Company.Company" msprop:Format="x(8)" type="xs:string" />
+                <xs:element name="ProductID" msdata:Caption="Product" msprop:ReadOnly="True" msprop:Like="DashBdDef.ProductID" msprop:Format="x(2)" type="xs:string" />
+                <xs:element name="TypeCode" msdata:Caption="Type" msprop:ReadOnly="True" msprop:Like="XXXDef.TypeCode" msprop:Format="x(20)" type="xs:string" />
+                <xs:element name="Key1" msdata:Caption="Key 1" msprop:Like="XXXDef.Key1" msprop:Format="x(50)" type="xs:string" />
+                <xs:element name="Key2" msdata:Caption="Key 2" msprop:Like="XXXDef.Key2" msprop:Format="x(100)" type="xs:string" />
+                <xs:element name="Key3" msdata:Caption="Key 3" msprop:Like="XXXDef.Key3" msprop:Format="x(50)" type="xs:string" />
+                <xs:element name="Description" msprop:Format="x(60)" type="xs:string" minOccurs="0" />
+                <xs:element name="LastUpdated" msdata:Caption="Last Updated" msprop:ReadOnly="True" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="LastUpdatedBy" msdata:Caption="User ID" msprop:ReadOnly="True" msprop:Like="UserFile.UserID" msprop:Format="x(75)" type="xs:string" minOccurs="0" />
+                <xs:element name="Version" msprop:ReadOnly="True" msprop:Format="x(20)" type="xs:string" minOccurs="0" />
+                <xs:element name="DataBaseVersion" msprop:ReadOnly="True" msprop:Format="99999999" type="xs:int" minOccurs="0" />
+                <xs:element name="SysCharacter01" msprop:Format="x(16000)" type="xs:string" minOccurs="0" />
+                <xs:element name="SysCharacter02" msprop:Format="x(16000)" type="xs:string" minOccurs="0" />
+                <xs:element name="SysCharacter03" msprop:Format="x(16000)" type="xs:string" minOccurs="0" />
+                <xs:element name="SysCharacter04" msprop:ReadOnly="True" msprop:Format="x(16000)" type="xs:string" minOccurs="0" />
+                <xs:element name="SysCharacter05" msprop:ReadOnly="True" msprop:Format="x(16000)" type="xs:string" minOccurs="0" />
+                <xs:element name="SysNumber01" type="xs:decimal" minOccurs="0" />
+                <xs:element name="SysNumber02" type="xs:decimal" minOccurs="0" />
+                <xs:element name="SysNumber03" type="xs:decimal" minOccurs="0" />
+                <xs:element name="SysNumber04" type="xs:decimal" minOccurs="0" />
+                <xs:element name="SysNumber05" type="xs:decimal" minOccurs="0" />
+                <xs:element name="SysDate01" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="SysDate02" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="SysDate03" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="SysDate04" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="SysDate05" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="SysCheckBox01" type="xs:boolean" minOccurs="0" />
+                <xs:element name="SysCheckBox02" type="xs:boolean" minOccurs="0" />
+                <xs:element name="SysCheckBox03" type="xs:boolean" minOccurs="0" />
+                <xs:element name="SysCheckBox04" type="xs:boolean" minOccurs="0" />
+                <xs:element name="SysCheckBox05" type="xs:boolean" minOccurs="0" />
+                <xs:element name="CommentText" msprop:Format="x(16000)" type="xs:string" minOccurs="0" />
+                <xs:element name="CGCCode" msprop:ReadOnly="True" msprop:Format="x(8)" type="xs:string" />
+                <xs:element name="SystemFlag" msprop:ReadOnly="True" type="xs:boolean" minOccurs="0" />
+                <xs:element name="SysRevID" msprop:SystemColumn="True" msprop:Format="&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9" type="xs:long" minOccurs="0" />
+                <xs:element name="SysRowID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:SystemColumn="True" msprop:Format="X(36)" type="xs:string" minOccurs="0" />
+                <xs:element name="SysCheckBox06" type="xs:boolean" minOccurs="0" />
+                <xs:element name="SysCheckBox07" type="xs:boolean" minOccurs="0" />
+                <xs:element name="OnMenu" msprop:ReadOnly="True" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Duplicate" msprop:ReadOnly="True" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Cosmetic" msprop:ReadOnly="True" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Content" msprop:Format="x(16000)" type="xs:string" minOccurs="0" />
+                <xs:element name="BitFlag" msdata:Caption="Bit Flag" msprop:ReadOnly="True" msprop:SystemColumn="True" msprop:External="True" type="xs:int" minOccurs="0" />
+                <xs:element name="RowMod" msprop:SystemColumn="True" msprop:External="True" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="XXXDefPK_XXXDef" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:XXXDef" />
+        <xs:field xpath="mstns:Company" />
+        <xs:field xpath="mstns:ProductID" />
+        <xs:field xpath="mstns:TypeCode" />
+        <xs:field xpath="mstns:CGCCode" />
+        <xs:field xpath="mstns:Key1" />
+        <xs:field xpath="mstns:Key2" />
+        <xs:field xpath="mstns:Key3" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <XXXDef>
+    <Company />
+    <ProductID>EP</ProductID>
+    <TypeCode>Customization</TypeCode>
+    <Key1>GMS_HistoricalOrders</Key1>
+    <Key2>App.PartAdvisor.PartAdvisorForm</Key2>
+    <Key3 />
+    <Description />
+    <LastUpdated>2022-04-26T00:00:00-04:00</LastUpdated>
+    <LastUpdatedBy>manager</LastUpdatedBy>
+    <Version>4/26/2022 10:04:35 A</Version>
+    <DataBaseVersion>30800</DataBaseVersion>
+    <SysCharacter01 />
+    <SysCharacter02 />
+    <SysCharacter03 />
+    <SysCharacter04>Pass</SysCharacter04>
+    <SysCharacter05>3.2.600.0</SysCharacter05>
+    <SysNumber01>0.000000000</SysNumber01>
+    <SysNumber02>0.000000000</SysNumber02>
+    <SysNumber03>0.000000000</SysNumber03>
+    <SysNumber04>0.000000000</SysNumber04>
+    <SysNumber05>0.000000000</SysNumber05>
+    <SysCheckBox01>false</SysCheckBox01>
+    <SysCheckBox02>false</SysCheckBox02>
+    <SysCheckBox03>false</SysCheckBox03>
+    <SysCheckBox04>false</SysCheckBox04>
+    <SysCheckBox05>true</SysCheckBox05>
+    <CommentText>[manager 2/8/2019 7:13 PM]
+Moved data from XXXChunk to XXXDef.Content
+
+
+*----------------------------------------------------------*
+Validation for Version: 3.2.300.0
+Status: Pass
+Version: 3.2.300.0
+
+[manager: 2/8/2019 7:56:20 PM]
+*----------------------------------------------------------*
+
+*----------------------------------------------------------*
+Validation for Version: 3.2.600.0
+Status: Pass
+Version: f3.2.600.0
+
+[John Vinson: 9/26/2020 6:30:44 PM]
+*----------------------------------------------------------*</CommentText>
+    <CGCCode />
+    <SystemFlag>false</SystemFlag>
+    <SysRevID>3081391076</SysRevID>
+    <SysRowID>ecc5bd1a-86ab-4c99-ac00-99abec7f91c0</SysRowID>
+    <SysCheckBox06>false</SysCheckBox06>
+    <SysCheckBox07>false</SysCheckBox07>
+    <OnMenu>true</OnMenu>
+    <Duplicate>false</Duplicate>
+    <Cosmetic>false</Cosmetic>
+    <Content>&lt;CustomizationDS xmlns="http://tempuri.org/XMLSchema.xsd"&gt;
+  &lt;xs:schema id="CustomizationDS" targetNamespace="http://tempuri.org/XMLSchema.xsd" xmlns:mstns="http://tempuri.org/XMLSchema.xsd" xmlns="http://tempuri.org/XMLSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified"&gt;
+    &lt;xs:element name="CustomizationDS" msdata:IsDataSet="true" msdata:Locale="" msprop:CommentText="" msprop:CGCCode="" msprop:ProductID="EP" msprop:Key2="App.PartAdvisor.PartAdvisorForm" msprop:BuildVersion="3.2.600.0" msprop:TypeCode="Customization" msprop:DataBaseVersion="30500" msprop:Description="GMS_HistoricalOrders" msprop:SysCharacter04="Pass" msprop:Version="3/5/2018 2:04:09 PM" msprop:Key1="GMS_HistoricalOrders" msprop:Company="GMSNC" msprop:Key3=""&gt;
+      &lt;xs:complexType&gt;
+        &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+          &lt;xs:element name="Controls"&gt;
+            &lt;xs:complexType&gt;
+              &lt;xs:sequence&gt;
+                &lt;xs:element name="FormsID" type="xs:string" /&gt;
+                &lt;xs:element name="ControlName" type="xs:string" /&gt;
+                &lt;xs:element name="Key" type="xs:string" /&gt;
+                &lt;xs:element name="ParentControlKey" type="xs:string" /&gt;
+                &lt;xs:element name="ControlType" type="xs:string" /&gt;
+                &lt;xs:element name="Company" type="xs:string" /&gt;
+                &lt;xs:element name="Plant" type="xs:string" /&gt;
+                &lt;xs:element name="DcdUserId" type="xs:string" /&gt;
+                &lt;xs:element name="GroupID" type="xs:string" /&gt;
+                &lt;xs:element name="ControlsID" type="xs:string" /&gt;
+              &lt;/xs:sequence&gt;
+            &lt;/xs:complexType&gt;
+          &lt;/xs:element&gt;
+          &lt;xs:element name="Properties"&gt;
+            &lt;xs:complexType&gt;
+              &lt;xs:sequence&gt;
+                &lt;xs:element name="FormsID" type="xs:string" /&gt;
+                &lt;xs:element name="ControlName" type="xs:string" /&gt;
+                &lt;xs:element name="Key" type="xs:string" /&gt;
+                &lt;xs:element name="PropertyName" type="xs:string" /&gt;
+                &lt;xs:element name="PropertyValue" type="xs:string" /&gt;
+                &lt;xs:element name="Company" type="xs:string" /&gt;
+                &lt;xs:element name="Plant" type="xs:string" /&gt;
+                &lt;xs:element name="DcdUserID" type="xs:string" /&gt;
+                &lt;xs:element name="GroupID" type="xs:string" /&gt;
+                &lt;xs:element name="PropertiesID" type="xs:string" /&gt;
+              &lt;/xs:sequence&gt;
+            &lt;/xs:complexType&gt;
+          &lt;/xs:element&gt;
+        &lt;/xs:choice&gt;
+      &lt;/xs:complexType&gt;
+    &lt;/xs:element&gt;
+  &lt;/xs:schema&gt;
+  &lt;Controls&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;HistoricalOrders&lt;/ControlName&gt;
+    &lt;Key&gt;e193b9d5-f319-4e40-abe1-1fd4b4bdb8b1&lt;/Key&gt;
+    &lt;ParentControlKey&gt;partAdvisorDockPanel1.windowDockingArea2.&lt;/ParentControlKey&gt;
+    &lt;ControlType&gt;Ice.Lib.Framework.EpiDockManagerPanel&lt;/ControlType&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserId /&gt;
+    &lt;GroupID /&gt;
+    &lt;ControlsID /&gt;
+  &lt;/Controls&gt;
+  &lt;Controls&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;HistoricalOrdersDashboardPanel&lt;/ControlName&gt;
+    &lt;Key&gt;gmsSalesAnalysisb999a3b6-1ba0-4c48-8663-517f5232231b&lt;/Key&gt;
+    &lt;ParentControlKey&gt;e193b9d5-f319-4e40-abe1-1fd4b4bdb8b1&lt;/ParentControlKey&gt;
+    &lt;ControlType&gt;Ice.UI.Dashboard.DashboardPanel&lt;/ControlType&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserId /&gt;
+    &lt;GroupID /&gt;
+    &lt;ControlsID /&gt;
+  &lt;/Controls&gt;
+  &lt;Controls&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;ice.ui.dashboard.dll&lt;/ControlName&gt;
+    &lt;Key&gt;EpiString.ExecutionPath*ice.ui.dashboard.dll&lt;/Key&gt;
+    &lt;ParentControlKey /&gt;
+    &lt;ControlType&gt;AssemblyReference&lt;/ControlType&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserId /&gt;
+    &lt;GroupID /&gt;
+    &lt;ControlsID /&gt;
+  &lt;/Controls&gt;
+  &lt;Controls&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;ice.adapters.dynamicquery.dll&lt;/ControlName&gt;
+    &lt;Key&gt;EpiString.ExecutionPath*ice.adapters.dynamicquery.dll&lt;/Key&gt;
+    &lt;ParentControlKey /&gt;
+    &lt;ControlType&gt;AssemblyReference&lt;/ControlType&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserId /&gt;
+    &lt;GroupID /&gt;
+    &lt;ControlsID /&gt;
+  &lt;/Controls&gt;
+  &lt;Controls&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;ice.contracts.bo.dynamicquery.dll&lt;/ControlName&gt;
+    &lt;Key&gt;EpiString.ExecutionPath*ice.contracts.bo.dynamicquery.dll&lt;/Key&gt;
+    &lt;ParentControlKey /&gt;
+    &lt;ControlType&gt;AssemblyReference&lt;/ControlType&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserId /&gt;
+    &lt;GroupID /&gt;
+    &lt;ControlsID /&gt;
+  &lt;/Controls&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;Customization&lt;/ControlName&gt;
+    &lt;Key&gt;2dcd1674-5e34-4d98-b493-c75747027376&lt;/Key&gt;
+    &lt;PropertyName&gt;Script&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;// **************************************************
+// Custom code for PartAdvisorForm
+// Created: 3/5/2018 1:58:25 PM
+//
+//			NOTES
+//
+// *****  QUERY DEPENDENT   ******
+//	* Name - GetOrderPONum *	
+// **************************************************
+
+extern alias Erp_Contracts_BO_PartAdvisor;
+extern alias Erp_Contracts_BO_Part;
+
+
+using System;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Windows.Forms;
+using Erp.Adapters;
+using Erp.UI;
+using Ice.Lib;
+using Ice.Adapters;
+using Ice.Lib.Customization;
+using Ice.Lib.ExtendedProps;
+using Ice.Lib.Framework;
+using Ice.Lib.Searches;
+using Ice.UI.FormFunctions;
+using Infragistics.Win.UltraWinGrid;
+using Ice.BO;
+
+public class Script
+{
+	// ** Wizard Insert Location - Do Not Remove 'Begin/End Wizard Added Module Level Variables' Comments! **
+	// Begin Wizard Added Module Level Variables **
+
+	// End Wizard Added Module Level Variables **
+
+	// Add Custom Module Level Variables Here **
+	EpiUltraGrid myGrid; 
+	DynamicQueryAdapter boQry;
+	QueryExecutionDataSet executionDS;
+	DataRow Param;
+
+	public void InitializeCustomCode()
+	{
+		// ** Wizard Insert Location - Do not delete 'Begin/End Wizard Added Variable Initialization' lines **
+		// Begin Wizard Added Variable Initialization
+
+		// End Wizard Added Variable Initialization
+
+		// Begin Wizard Added Custom Method Calls
+
+		// End Wizard Added Custom Method Calls
+		myGrid = (EpiUltraGrid)csm.GetNativeControlReference("0f6f0566-39c9-476c-b570-95e7aa2d4460");
+		myGrid.DisplayLayout.Bands[0].Columns.Add("PONum", "PO Num");
+		myGrid.DisplayLayout.Bands[0].Columns["PONum"].CellActivation = Activation.Disabled;
+		myGrid.DisplayLayout.Bands[0].Columns["PONum"].Header.VisiblePosition = 2;
+		myGrid.InitializeRow += new Infragistics.Win.UltraWinGrid.InitializeRowEventHandler( myGrid_InitRow );
+		
+		boQry = new DynamicQueryAdapter(oTrans);
+		boQry.BOConnect();
+
+		executionDS = new QueryExecutionDataSet();
+		Param = executionDS.ExecutionParameter.NewRow();
+
+		Param["ParameterID"] = "OrderNum";
+		Param["ParameterValue"] = 0;
+		Param["ValueType"] = "Int";
+		Param["IsEmpty"] = "False";
+		Param["SysRowID"] = new Guid();
+		executionDS.ExecutionParameter.Rows.Add(Param);
+	}
+
+	private void myGrid_InitRow( object sender, Infragistics.Win.UltraWinGrid.InitializeRowEventArgs e) 
+	{
+		if( ((int)e.Row.Cells["OrderNum"].Value) &amp;gt; 0 )
+		{
+			//MessageBox.Show(""+e.Row.Cells["OrderNum"].Value);
+			//string whereClause = String.Format("OrderNum = '{0}'", e.Row.Cells["OrderNum"].Value);
+
+			//DataSet ds = _bor.GetRows("Erp:BO:SalesOrder", whereClause, "" );
+
+			Param["ParameterValue"] = e.Row.Cells["OrderNum"].Value;
+
+		    boQry.ExecuteByID("GetOrderPONum", executionDS);
+
+		    DataTable dtInfo = boQry.QueryResults.Tables[0];
+
+			if(dtInfo.Rows.Count &amp;gt; 0 )
+			{
+				//MessageBox.Show("Have Row");
+				e.Row.Cells["PONum"].Value = dtInfo.Rows[0]["OrderHed_PONum"]; 
+			}
+		}
+	}
+
+	public void DestroyCustomCode()
+	{
+		// ** Wizard Insert Location - Do not delete 'Begin/End Wizard Added Object Disposal' lines **
+		// Begin Wizard Added Object Disposal
+
+		// End Wizard Added Object Disposal
+
+		// Begin Custom Code Disposal
+
+		// End Custom Code Disposal
+		myGrid.InitializeRow -= new Infragistics.Win.UltraWinGrid.InitializeRowEventHandler( myGrid_InitRow );
+		boQry.Dispose();
+
+	}
+}
+&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;Customization&lt;/ControlName&gt;
+    &lt;Key&gt;2dcd1674-5e34-4d98-b493-c75747027376&lt;/Key&gt;
+    &lt;PropertyName&gt;Language&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;CSharp&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;HistoricalOrders&lt;/ControlName&gt;
+    &lt;Key&gt;e193b9d5-f319-4e40-abe1-1fd4b4bdb8b1&lt;/Key&gt;
+    &lt;PropertyName&gt;Text&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;Historical Orders&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;HistoricalOrders&lt;/ControlName&gt;
+    &lt;Key&gt;e193b9d5-f319-4e40-abe1-1fd4b4bdb8b1&lt;/Key&gt;
+    &lt;PropertyName&gt;TextTab&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;Historical Orders&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;HistoricalOrders&lt;/ControlName&gt;
+    &lt;Key&gt;e193b9d5-f319-4e40-abe1-1fd4b4bdb8b1&lt;/Key&gt;
+    &lt;PropertyName&gt;Parent&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;baseDockManager65ad0f2d-e5e4-4f95-b7cf-52342f6058f6&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;HistoricalOrdersDashboardPanel&lt;/ControlName&gt;
+    &lt;Key&gt;gmsSalesAnalysisb999a3b6-1ba0-4c48-8663-517f5232231b&lt;/Key&gt;
+    &lt;PropertyName&gt;Parent&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;e193b9d5-f319-4e40-abe1-1fd4b4bdb8b1&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;HistoricalOrdersDashboardPanel&lt;/ControlName&gt;
+    &lt;Key&gt;gmsSalesAnalysisb999a3b6-1ba0-4c48-8663-517f5232231b&lt;/Key&gt;
+    &lt;PropertyName&gt;ShowStatusBar&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;True&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;HistoricalOrdersDashboardPanel&lt;/ControlName&gt;
+    &lt;Key&gt;gmsSalesAnalysisb999a3b6-1ba0-4c48-8663-517f5232231b&lt;/Key&gt;
+    &lt;PropertyName&gt;ShowToolBar&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;True&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;HistoricalOrdersDashboardPanel&lt;/ControlName&gt;
+    &lt;Key&gt;gmsSalesAnalysisb999a3b6-1ba0-4c48-8663-517f5232231b&lt;/Key&gt;
+    &lt;PropertyName&gt;IncludeRetrieveButton&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;False&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;HistoricalOrdersDashboardPanel&lt;/ControlName&gt;
+    &lt;Key&gt;gmsSalesAnalysisb999a3b6-1ba0-4c48-8663-517f5232231b&lt;/Key&gt;
+    &lt;PropertyName&gt;LikeArgument&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;Part.PartNum:PartView.PartNum&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;lblCustomer_CustID&lt;/ControlName&gt;
+    &lt;Key&gt;TrackerPanel.lblCustomer_CustID&lt;/Key&gt;
+    &lt;PropertyName&gt;Left&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;8&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;lblCustomer_CustID&lt;/ControlName&gt;
+    &lt;Key&gt;TrackerPanel.lblCustomer_CustID&lt;/Key&gt;
+    &lt;PropertyName&gt;Top&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;8&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;lblOrderDtl_PartNum&lt;/ControlName&gt;
+    &lt;Key&gt;TrackerPanel.lblOrderDtl_PartNum&lt;/Key&gt;
+    &lt;PropertyName&gt;Left&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;8&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;lblOrderDtl_PartNum&lt;/ControlName&gt;
+    &lt;Key&gt;TrackerPanel.lblOrderDtl_PartNum&lt;/Key&gt;
+    &lt;PropertyName&gt;Top&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;32&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;ultraGrid1&lt;/ControlName&gt;
+    &lt;Key&gt;e84518c2-cbbe-4ad0-96ec-0b580cbcc560.ultraGrid1&lt;/Key&gt;
+    &lt;PropertyName&gt;ChildIndex&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;0&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;ultraGrid1&lt;/ControlName&gt;
+    &lt;Key&gt;e84518c2-cbbe-4ad0-96ec-0b580cbcc560.ultraGrid1&lt;/Key&gt;
+    &lt;PropertyName&gt;Anchor&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;Top, Left&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;ultraGrid1&lt;/ControlName&gt;
+    &lt;Key&gt;e84518c2-cbbe-4ad0-96ec-0b580cbcc560.ultraGrid1&lt;/Key&gt;
+    &lt;PropertyName&gt;AnchorTop&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;0&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;ultraGrid1&lt;/ControlName&gt;
+    &lt;Key&gt;e84518c2-cbbe-4ad0-96ec-0b580cbcc560.ultraGrid1&lt;/Key&gt;
+    &lt;PropertyName&gt;AnchorLeft&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;0&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;ultraGrid1&lt;/ControlName&gt;
+    &lt;Key&gt;e84518c2-cbbe-4ad0-96ec-0b580cbcc560.ultraGrid1&lt;/Key&gt;
+    &lt;PropertyName&gt;AnchorWidth&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;782&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;ultraGrid1&lt;/ControlName&gt;
+    &lt;Key&gt;e84518c2-cbbe-4ad0-96ec-0b580cbcc560.ultraGrid1&lt;/Key&gt;
+    &lt;PropertyName&gt;AnchorHeight&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;332&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;e84518c2-cbbe-4ad0-96ec-0b580cbcc560&lt;/ControlName&gt;
+    &lt;Key&gt;7d3f60b3-beb3-46a3-aa6b-5810cd09d565&lt;/Key&gt;
+    &lt;PropertyName&gt;Top&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;20&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+  &lt;Properties&gt;
+    &lt;FormsID&gt;PartAdvisorForm&lt;/FormsID&gt;
+    &lt;ControlName&gt;e84518c2-cbbe-4ad0-96ec-0b580cbcc560&lt;/ControlName&gt;
+    &lt;Key&gt;7d3f60b3-beb3-46a3-aa6b-5810cd09d565&lt;/Key&gt;
+    &lt;PropertyName&gt;Left&lt;/PropertyName&gt;
+    &lt;PropertyValue&gt;0&lt;/PropertyValue&gt;
+    &lt;Company /&gt;
+    &lt;Plant /&gt;
+    &lt;DcdUserID /&gt;
+    &lt;GroupID /&gt;
+    &lt;PropertiesID /&gt;
+  &lt;/Properties&gt;
+&lt;/CustomizationDS&gt;</Content>
+    <BitFlag>0</BitFlag>
+    <RowMod />
+  </XXXDef>
+</GenXDataDataSet>
