@@ -1,0 +1,306 @@
+<?xml version="1.0" standalone="yes"?>
+<DynamicReportDataSet xmlns="http://www.epicor.com/Ice/300/BO/DynamicReport/DynamicReport">
+  <BAQReport>
+    <Company />
+    <BAQRptID>gmsInvcAnalysLY</BAQRptID>
+    <Description>Item Invoice Analysis Report (MTD/LY)</Description>
+    <ReportTitle />
+    <FormTitle>Item Invoice Analysis Report (MTD/LY)</FormTitle>
+    <ExportID>gmsInvoiceItemRevenueAnalysis</ExportID>
+    <SystemFlag>false</SystemFlag>
+    <Completed>false</Completed>
+    <GlobalReport>false</GlobalReport>
+    <IsCrystalReport>false</IsCrystalReport>
+    <ReportID>gmsInvcAnalysLY</ReportID>
+    <CrystalReportName />
+    <CGCCode />
+    <SSRSReportName>gmsInvcAnalysLY.rdl</SSRSReportName>
+    <SysRevID>3081849502</SysRevID>
+    <SysRowID>0658b1ed-58e3-4008-b255-f85ec6dd4465</SysRowID>
+    <TempRowID />
+    <BitFlag>0</BitFlag>
+    <RowMod />
+  </BAQReport>
+  <BAQRptOptionFld>
+    <Company />
+    <BAQRptID>gmsInvcAnalysLY</BAQRptID>
+    <DataTableID>ReportParam</DataTableID>
+    <FieldName>Check01</FieldName>
+    <CompOp>=</CompOp>
+    <Seq>1</Seq>
+    <DefaultValue>true</DefaultValue>
+    <FieldLabel>Show Pricing</FieldLabel>
+    <DisplayName>ReportParam_Check01</DisplayName>
+    <FieldFormat />
+    <EpiGuid>af59406b-2928-4b4e-866b-2967ab2349c2</EpiGuid>
+    <IsVisible>false</IsVisible>
+    <DataType>bit</DataType>
+    <SystemFlag>false</SystemFlag>
+    <DispOrder>1</DispOrder>
+    <SysRevID>3081849707</SysRevID>
+    <SysRowID>be3b2766-ef3d-4028-98ef-6edbba2740ff</SysRowID>
+    <FieldValue />
+    <TempRowID />
+    <BitFlag>0</BitFlag>
+    <RowMod />
+  </BAQRptOptionFld>
+  <BAQRptOptionFld>
+    <Company />
+    <BAQRptID>gmsInvcAnalysLY</BAQRptID>
+    <DataTableID>ReportParam</DataTableID>
+    <FieldName>Check02</FieldName>
+    <CompOp>=</CompOp>
+    <Seq>2</Seq>
+    <DefaultValue>false</DefaultValue>
+    <FieldLabel>Include Zero Price Items</FieldLabel>
+    <DisplayName>ReportParam_Check02</DisplayName>
+    <FieldFormat />
+    <EpiGuid>9adfe274-172b-473b-9f88-2f10fc7395fa</EpiGuid>
+    <IsVisible>false</IsVisible>
+    <DataType>bit</DataType>
+    <SystemFlag>false</SystemFlag>
+    <DispOrder>2</DispOrder>
+    <SysRevID>3081849708</SysRevID>
+    <SysRowID>1cae084b-ea26-421c-8ef9-84f8a5a1bdde</SysRowID>
+    <FieldValue />
+    <TempRowID />
+    <BitFlag>0</BitFlag>
+    <RowMod />
+  </BAQRptOptionFld>
+  <BAQRptOptionFld>
+    <Company />
+    <BAQRptID>gmsInvcAnalysLY</BAQRptID>
+    <DataTableID>ReportParam</DataTableID>
+    <FieldName>Check03</FieldName>
+    <CompOp>=</CompOp>
+    <Seq>3</Seq>
+    <DefaultValue>false</DefaultValue>
+    <FieldLabel>Include NonStock Items</FieldLabel>
+    <DisplayName>ReportParam_Check03</DisplayName>
+    <FieldFormat />
+    <EpiGuid>c417504c-f713-4f24-b768-d8223b70ef1d</EpiGuid>
+    <IsVisible>false</IsVisible>
+    <DataType>bit</DataType>
+    <SystemFlag>false</SystemFlag>
+    <DispOrder>3</DispOrder>
+    <SysRevID>3081849709</SysRevID>
+    <SysRowID>994c69ff-81e3-4f84-8420-929331220cd7</SysRowID>
+    <FieldValue />
+    <TempRowID />
+    <BitFlag>0</BitFlag>
+    <RowMod />
+  </BAQRptOptionFld>
+  <BAQRptOptionFld>
+    <Company />
+    <BAQRptID>gmsInvcAnalysLY</BAQRptID>
+    <DataTableID>ReportParam</DataTableID>
+    <FieldName>Number01</FieldName>
+    <CompOp>=</CompOp>
+    <Seq>4</Seq>
+    <DefaultValue />
+    <FieldLabel>Limit for Top-Selling Items</FieldLabel>
+    <DisplayName>ReportParam_Number01</DisplayName>
+    <FieldFormat />
+    <EpiGuid>c04de76e-8b2a-4c0e-8416-1adaae60c74e</EpiGuid>
+    <IsVisible>false</IsVisible>
+    <DataType>decimal</DataType>
+    <SystemFlag>false</SystemFlag>
+    <DispOrder>4</DispOrder>
+    <SysRevID>3081849710</SysRevID>
+    <SysRowID>7449c1f2-7329-4542-8727-7c7b8cbecedc</SysRowID>
+    <FieldValue />
+    <TempRowID />
+    <BitFlag>0</BitFlag>
+    <RowMod />
+  </BAQRptOptionFld>
+  <BAQRptOptionFld>
+    <Company />
+    <BAQRptID>gmsInvcAnalysLY</BAQRptID>
+    <DataTableID>InvcHead</DataTableID>
+    <FieldName>InvoiceDate</FieldName>
+    <CompOp>&lt;=</CompOp>
+    <Seq>5</Seq>
+    <DefaultValue />
+    <FieldLabel>Invoice Date To</FieldLabel>
+    <DisplayName>InvcHead_InvoiceDate</DisplayName>
+    <FieldFormat>{date}</FieldFormat>
+    <EpiGuid>dda174ee-9514-4ca7-90ef-56fc1f13fd36</EpiGuid>
+    <IsVisible>false</IsVisible>
+    <DataType>date</DataType>
+    <SystemFlag>false</SystemFlag>
+    <DispOrder>6</DispOrder>
+    <SysRevID>3081849712</SysRevID>
+    <SysRowID>22b2849a-4335-4419-8fc0-5e07eda1b1b5</SysRowID>
+    <FieldValue />
+    <TempRowID />
+    <BitFlag>0</BitFlag>
+    <RowMod />
+  </BAQRptOptionFld>
+  <BAQRptOptionFld>
+    <Company />
+    <BAQRptID>gmsInvcAnalysLY</BAQRptID>
+    <DataTableID>InvcHead</DataTableID>
+    <FieldName>InvoiceDate</FieldName>
+    <CompOp>&gt;=</CompOp>
+    <Seq>6</Seq>
+    <DefaultValue />
+    <FieldLabel>Invoice Date From</FieldLabel>
+    <DisplayName>InvcHead_InvoiceDate</DisplayName>
+    <FieldFormat>{date}</FieldFormat>
+    <EpiGuid>9b4d3d7e-d05b-452f-9a8d-9e2e3a75b374</EpiGuid>
+    <IsVisible>false</IsVisible>
+    <DataType>date</DataType>
+    <SystemFlag>false</SystemFlag>
+    <DispOrder>5</DispOrder>
+    <SysRevID>3081849711</SysRevID>
+    <SysRowID>d982ee34-a319-4144-a482-fd356b73eb3d</SysRowID>
+    <FieldValue />
+    <TempRowID />
+    <BitFlag>0</BitFlag>
+    <RowMod />
+  </BAQRptOptionFld>
+  <BAQRptFilter>
+    <Company />
+    <BAQRptID>gmsInvcAnalysLY</BAQRptID>
+    <DataTableID>Part</DataTableID>
+    <FieldName>ProdCode</FieldName>
+    <AdapterName>ProdGrupAdapter</AdapterName>
+    <Seq>1</Seq>
+    <LookupField>ProdCode</LookupField>
+    <FilterLabel>Group</FilterLabel>
+    <TabLabel>Group</TabLabel>
+    <DisplayName>Part_ProdCode</DisplayName>
+    <EpiGuid>eddf8cb4-cdad-44b2-8766-441432bbc51e</EpiGuid>
+    <IsVisible>false</IsVisible>
+    <FilterField />
+    <SystemFlag>false</SystemFlag>
+    <DispOrder>0</DispOrder>
+    <DataType>nvarchar</DataType>
+    <SysRevID>3081849643</SysRevID>
+    <SysRowID>ed83bf72-c1bb-448d-9df7-9dfb995911d9</SysRowID>
+    <TempRowID />
+    <FilterValue />
+    <BitFlag>0</BitFlag>
+    <RowMod />
+  </BAQRptFilter>
+  <BAQRptFilter>
+    <Company />
+    <BAQRptID>gmsInvcAnalysLY</BAQRptID>
+    <DataTableID>Customer</DataTableID>
+    <FieldName>CustID</FieldName>
+    <AdapterName>CustomerAdapter</AdapterName>
+    <Seq>2</Seq>
+    <LookupField>CustID</LookupField>
+    <FilterLabel>Cust. ID</FilterLabel>
+    <TabLabel>Cust. ID</TabLabel>
+    <DisplayName>Customer_CustID</DisplayName>
+    <EpiGuid>a9beeda1-374d-4d4e-9aaa-011b0f9a63ca</EpiGuid>
+    <IsVisible>false</IsVisible>
+    <FilterField />
+    <SystemFlag>false</SystemFlag>
+    <DispOrder>0</DispOrder>
+    <DataType>nvarchar</DataType>
+    <SysRevID>3081849650</SysRevID>
+    <SysRowID>1604a591-fca9-495b-9ae4-d43cfd16dbb2</SysRowID>
+    <TempRowID />
+    <FilterValue />
+    <BitFlag>0</BitFlag>
+    <RowMod />
+  </BAQRptFilter>
+  <BAQRptFilter>
+    <Company />
+    <BAQRptID>gmsInvcAnalysLY</BAQRptID>
+    <DataTableID>ShipTo</DataTableID>
+    <FieldName>ShipToNum</FieldName>
+    <AdapterName>ShipToAdapter</AdapterName>
+    <Seq>3</Seq>
+    <LookupField>ShipToNum</LookupField>
+    <FilterLabel>Ship To</FilterLabel>
+    <TabLabel>Ship To</TabLabel>
+    <DisplayName>ShipTo_ShipToNum</DisplayName>
+    <EpiGuid>712a97c5-545c-4efe-9227-1b91eef88bf1</EpiGuid>
+    <IsVisible>false</IsVisible>
+    <FilterField />
+    <SystemFlag>false</SystemFlag>
+    <DispOrder>0</DispOrder>
+    <DataType>nvarchar</DataType>
+    <SysRevID>3081849657</SysRevID>
+    <SysRowID>43f74252-c8cc-46c0-ac4e-82aa724a4b40</SysRowID>
+    <TempRowID />
+    <FilterValue />
+    <BitFlag>0</BitFlag>
+    <RowMod />
+  </BAQRptFilter>
+  <BAQRptFilter>
+    <Company />
+    <BAQRptID>gmsInvcAnalysLY</BAQRptID>
+    <DataTableID>Part</DataTableID>
+    <FieldName>PartNum</FieldName>
+    <AdapterName>PartAdapter</AdapterName>
+    <Seq>4</Seq>
+    <LookupField>PartNum</LookupField>
+    <FilterLabel>Part</FilterLabel>
+    <TabLabel>Part</TabLabel>
+    <DisplayName>Part_PartNum</DisplayName>
+    <EpiGuid>382618e3-7da6-48d4-8041-ac63bd0eaa57</EpiGuid>
+    <IsVisible>false</IsVisible>
+    <FilterField />
+    <SystemFlag>false</SystemFlag>
+    <DispOrder>0</DispOrder>
+    <DataType>nvarchar</DataType>
+    <SysRevID>3081849688</SysRevID>
+    <SysRowID>04c817ea-0aeb-4808-a72f-a3d297bce559</SysRowID>
+    <TempRowID />
+    <FilterValue />
+    <BitFlag>0</BitFlag>
+    <RowMod />
+  </BAQRptFilter>
+  <BAQRptSort>
+    <Company />
+    <BAQRptID>gmsInvcAnalysLY</BAQRptID>
+    <SortID>Item Number / Ascending</SortID>
+    <SystemFlag>false</SystemFlag>
+    <IsDefault>false</IsDefault>
+    <SysRevID>3081850068</SysRevID>
+    <SysRowID>4c5442ca-7d8b-4962-8291-25c6ebbf9b2c</SysRowID>
+    <TempRowID />
+    <BitFlag>0</BitFlag>
+    <RowMod />
+  </BAQRptSort>
+  <BAQRptSort>
+    <Company />
+    <BAQRptID>gmsInvcAnalysLY</BAQRptID>
+    <SortID>Item Number / Descending</SortID>
+    <SystemFlag>false</SystemFlag>
+    <IsDefault>false</IsDefault>
+    <SysRevID>3081850069</SysRevID>
+    <SysRowID>58c92c3c-f10c-4e31-8d37-415507af5502</SysRowID>
+    <TempRowID />
+    <BitFlag>0</BitFlag>
+    <RowMod />
+  </BAQRptSort>
+  <BAQRptSort>
+    <Company />
+    <BAQRptID>gmsInvcAnalysLY</BAQRptID>
+    <SortID>Sort Code / Ascending</SortID>
+    <SystemFlag>false</SystemFlag>
+    <IsDefault>false</IsDefault>
+    <SysRevID>3081850070</SysRevID>
+    <SysRowID>d838b94b-6e94-4840-b47b-25c63b4b35ae</SysRowID>
+    <TempRowID />
+    <BitFlag>0</BitFlag>
+    <RowMod />
+  </BAQRptSort>
+  <BAQRptSort>
+    <Company />
+    <BAQRptID>gmsInvcAnalysLY</BAQRptID>
+    <SortID>Sort Code / Descending</SortID>
+    <SystemFlag>false</SystemFlag>
+    <IsDefault>false</IsDefault>
+    <SysRevID>3081850071</SysRevID>
+    <SysRowID>1c1c0d77-0fc2-40d1-be6b-6a72d7235cd0</SysRowID>
+    <TempRowID />
+    <BitFlag>0</BitFlag>
+    <RowMod />
+  </BAQRptSort>
+</DynamicReportDataSet>
