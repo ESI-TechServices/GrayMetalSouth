@@ -116,21 +116,21 @@
   <BAQRptOptionFld>
     <Company />
     <BAQRptID>gmsInvcAnalysLY</BAQRptID>
-    <DataTableID>InvcHead</DataTableID>
-    <FieldName>InvoiceDate</FieldName>
-    <CompOp>&lt;=</CompOp>
-    <Seq>5</Seq>
+    <DataTableID>ReportParam</DataTableID>
+    <FieldName>Date01</FieldName>
+    <CompOp>=</CompOp>
+    <Seq>6</Seq>
     <DefaultValue />
-    <FieldLabel>Invoice Date To</FieldLabel>
-    <DisplayName>InvcHead_InvoiceDate</DisplayName>
-    <FieldFormat>{date}</FieldFormat>
-    <EpiGuid>dda174ee-9514-4ca7-90ef-56fc1f13fd36</EpiGuid>
+    <FieldLabel>Invoice Date From</FieldLabel>
+    <DisplayName>ReportParam_Date01</DisplayName>
+    <FieldFormat />
+    <EpiGuid>9b4d3d7e-d05b-452f-9a8d-9e2e3a75b374</EpiGuid>
     <IsVisible>false</IsVisible>
     <DataType>date</DataType>
     <SystemFlag>false</SystemFlag>
-    <DispOrder>6</DispOrder>
-    <SysRevID>3081849712</SysRevID>
-    <SysRowID>22b2849a-4335-4419-8fc0-5e07eda1b1b5</SysRowID>
+    <DispOrder>5</DispOrder>
+    <SysRevID>3082398640</SysRevID>
+    <SysRowID>d982ee34-a319-4144-a482-fd356b73eb3d</SysRowID>
     <FieldValue />
     <TempRowID />
     <BitFlag>0</BitFlag>
@@ -139,21 +139,21 @@
   <BAQRptOptionFld>
     <Company />
     <BAQRptID>gmsInvcAnalysLY</BAQRptID>
-    <DataTableID>InvcHead</DataTableID>
-    <FieldName>InvoiceDate</FieldName>
-    <CompOp>&gt;=</CompOp>
-    <Seq>6</Seq>
+    <DataTableID>ReportParam</DataTableID>
+    <FieldName>Date02</FieldName>
+    <CompOp>=</CompOp>
+    <Seq>7</Seq>
     <DefaultValue />
-    <FieldLabel>Invoice Date From</FieldLabel>
-    <DisplayName>InvcHead_InvoiceDate</DisplayName>
-    <FieldFormat>{date}</FieldFormat>
-    <EpiGuid>9b4d3d7e-d05b-452f-9a8d-9e2e3a75b374</EpiGuid>
+    <FieldLabel>Invoice Date To</FieldLabel>
+    <DisplayName>ReportParam_Date02</DisplayName>
+    <FieldFormat />
+    <EpiGuid>a4b5964a-1e33-4d88-8dba-39395b8f0d99</EpiGuid>
     <IsVisible>false</IsVisible>
     <DataType>date</DataType>
     <SystemFlag>false</SystemFlag>
-    <DispOrder>5</DispOrder>
-    <SysRevID>3081849711</SysRevID>
-    <SysRowID>d982ee34-a319-4144-a482-fd356b73eb3d</SysRowID>
+    <DispOrder>6</DispOrder>
+    <SysRevID>3082398641</SysRevID>
+    <SysRowID>dd9c3f92-aa24-4515-b80e-2e928ab8fbb5</SysRowID>
     <FieldValue />
     <TempRowID />
     <BitFlag>0</BitFlag>
