@@ -555,11 +555,13 @@
     <DataSet Name="BAQReportResult">
       <Query>
         <DataSourceName>dsBAQReport</DataSourceName>
-        <CommandText>="SELECT [ShipHead_Company],[ShipHead_ShipDate],[Part_PartNum],[Part_PartDescription],[Calculated_ShippedQty],[RefCategory_RefCategory],[OrderDtl_UnitPrice],[Customer_CustID],[Customer_Name],[Customer_State],[ShipTo_Name],[ShipTo_City],[ShipTo_State],[Calculated_Revenue],[Calculated_Year],[Calculated_Month],[Calculated_InvcEOM],[ShipTo_ShipToNum],[Part_ProdCode],[InvcHead_InvoiceDate],[InvcDtl_InvoiceNum],[InvcDtl_SellingShipQty],[InvcDtl_UnitPrice],[Part_gmsSortCode_c]
+        <CommandText>="SELECT [ShipHead_Company],[ShipHead_ShipDate],[Part_PartNum],[Part_PartDescription],[Calculated_ShippedQty],[RefCategory_RefCategory],[OrderDtl_UnitPrice],[Customer_CustID],[Customer_Name],[Customer_State],[ShipTo_Name],[ShipTo_City],[ShipTo_State],[Calculated_Revenue],[Calculated_Year],[Calculated_Month],[Calculated_InvcEOM],[ShipTo_ShipToNum],[Part_ProdCode],[InvcHead_InvoiceDate],[InvcDtl_InvoiceNum],[InvcDtl_SellingShipQty],[InvcDtl_UnitPrice] 
+, rp.Date01 As FromDate, rp.Date02 As ToDate
 , rp.Check01 As IncludeSales, rp.Check02 As IncludeZeroPrice, rp.Check03 As IncludeNonStock, rp.SortBy As SortBy, rp.Number01 
 
 FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
 	Inner Join dbo.[BAQReportParameter_" + Parameters!TableGuid.Value + "] rp on rr.[ShipHead_Company] = rp.[Cur-Comp] 
+	where rr.[InvcHead_InvoiceDate] &gt;= rp.Date01 AND rr.[InvcHead_InvoiceDate] &lt;= rp.Date02
 "</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
@@ -662,6 +664,14 @@ FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
         </Field>
         <Field Name="IncludeSales">
           <DataField>IncludeSales</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="FromDate">
+          <DataField>FromDate</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="ToDate">
+          <DataField>ToDate</DataField>
           <rd:UserDefined>true</rd:UserDefined>
         </Field>
       </Fields>
@@ -1374,7 +1384,7 @@ FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
             <Top>0.36292in</Top>
             <Left>0.20152in</Left>
             <Height>0.53125in</Height>
-            <Width>9.13098in</Width>
+            <Width>9.13097in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
