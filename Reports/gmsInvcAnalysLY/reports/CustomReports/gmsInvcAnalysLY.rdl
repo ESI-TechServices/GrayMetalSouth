@@ -555,7 +555,7 @@
     <DataSet Name="BAQReportResult">
       <Query>
         <DataSourceName>dsBAQReport</DataSourceName>
-        <CommandText>="SELECT [ShipHead_Company],[ShipHead_ShipDate],[Part_PartNum],[Part_PartDescription],[Calculated_ShippedQty],[RefCategory_RefCategory],[OrderDtl_UnitPrice],[Customer_CustID],[Customer_Name],[Customer_State],[ShipTo_Name],[ShipTo_City],[ShipTo_State],[Calculated_Revenue],[Calculated_Year],[Calculated_Month],[Calculated_InvcEOM],[ShipTo_ShipToNum],[Part_ProdCode],[InvcHead_InvoiceDate],[InvcDtl_InvoiceNum],[InvcDtl_SellingShipQty],[InvcDtl_UnitPrice] 
+        <CommandText>="SELECT [ShipHead_Company],[ShipHead_ShipDate],[Part_PartNum],[Part_PartDescription],[Calculated_ShippedQty],[RefCategory_RefCategory],[OrderDtl_UnitPrice],[Customer_CustID],[Customer_Name],[Customer_State],[ShipTo_Name],[ShipTo_City],[ShipTo_State],[Calculated_Revenue],[Calculated_Year],[Calculated_Month],[Calculated_InvcEOM],[ShipTo_ShipToNum],[Part_ProdCode],[InvcHead_InvoiceDate],[InvcDtl_InvoiceNum],[InvcDtl_SellingShipQty],[InvcDtl_UnitPrice],[Part_gmsSortCode_c] 
 , rp.Date01 As FromDate, rp.Date02 As ToDate
 , rp.Check01 As IncludeSales, rp.Check02 As IncludeZeroPrice, rp.Check03 As IncludeNonStock, rp.SortBy As SortBy, rp.Number01 
 
@@ -676,6 +676,35 @@ FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
         </Field>
       </Fields>
     </DataSet>
+    <DataSet Name="LYTD">
+      <Query>
+        <DataSourceName>dsBAQReport</DataSourceName>
+        <CommandText>="SELECT [Part_PartNum],[Part_gmsSortCode_c],[Calculated_ShippedQty],[Calculated_Revenue] 
+
+FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr 
+	Inner Join dbo.[BAQReportParameter_" + Parameters!TableGuid.Value + "] rp on rr.[ShipHead_Company] = rp.[Cur-Comp] 
+	where rr.[InvcHead_InvoiceDate] &gt;= DATEADD(year, -1, rp.Date01) AND rr.[InvcHead_InvoiceDate] &lt;= DATEADD(year, -1, rp.Date02)
+"</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Part_PartNum">
+          <DataField>Part_PartNum</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="Part_gmsSortCode_c">
+          <DataField>Part_gmsSortCode_c</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="Calculated_ShippedQty">
+          <DataField>Calculated_ShippedQty</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="Calculated_Revenue">
+          <DataField>Calculated_Revenue</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+      </Fields>
+    </DataSet>
   </DataSets>
   <ReportSections>
     <ReportSection>
@@ -685,31 +714,31 @@ FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.14486in</Width>
+                  <Width>1.0731in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.31597in</Width>
+                  <Width>1.24421in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.67014in</Width>
+                  <Width>0.59838in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.92824in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.92824in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.92824in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.92824in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.92824in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.92824in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -1194,16 +1223,19 @@ FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox29">
+                        <Textbox Name="Textbox106">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Code.SumLookup(LookupSet(Fields!Part_gmsSortCode_c.Value &amp; "-" &amp; Fields!Part_PartNum.Value
+	,Fields!Part_gmsSortCode_c.Value &amp; "-" &amp; Fields!Part_PartNum.Value
+	,Fields!Calculated_ShippedQty.Value, "LYTD"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
+                                    <Format>#0</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1212,7 +1244,7 @@ FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox29</rd:DefaultName>
+                          <rd:DefaultName>Textbox104</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1228,16 +1260,19 @@ FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox31">
+                        <Textbox Name="Textbox141">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Code.SumLookup(LookupSet(Fields!Part_gmsSortCode_c.Value &amp; "-" &amp; Fields!Part_PartNum.Value
+	,Fields!Part_gmsSortCode_c.Value &amp; "-" &amp; Fields!Part_PartNum.Value
+	,Fields!Calculated_Revenue.Value, "LYTD"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
+                                    <Format>#0</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1246,7 +1281,7 @@ FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox31</rd:DefaultName>
+                          <rd:DefaultName>Textbox137</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1262,16 +1297,25 @@ FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox33">
+                        <Textbox Name="Textbox28">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Code.SumLookup(LookupSet(Fields!Part_gmsSortCode_c.Value &amp; "-" &amp; Fields!Part_PartNum.Value
+	,Fields!Part_gmsSortCode_c.Value &amp; "-" &amp; Fields!Part_PartNum.Value
+	,Fields!Calculated_Revenue.Value, "LYTD")) 
+	/ 
+	IIF(Code.SumLookup(LookupSet(Fields!Part_gmsSortCode_c.Value &amp; "-" &amp; Fields!Part_PartNum.Value
+	,Fields!Part_gmsSortCode_c.Value &amp; "-" &amp; Fields!Part_PartNum.Value
+	,Fields!Calculated_ShippedQty.Value, "LYTD"))=0,1,Code.SumLookup(LookupSet(Fields!Part_gmsSortCode_c.Value &amp; "-" &amp; Fields!Part_PartNum.Value
+	,Fields!Part_gmsSortCode_c.Value &amp; "-" &amp; Fields!Part_PartNum.Value
+	,Fields!Calculated_ShippedQty.Value, "LYTD")))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
+                                    <Format>#,##0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1280,7 +1324,7 @@ FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox33</rd:DefaultName>
+                          <rd:DefaultName>Textbox28</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1296,14 +1340,15 @@ FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox41">
+                        <Textbox Name="Textbox5">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=RunningValue(Lookup(Fields!Part_gmsSortCode_c.Value &amp; "-" &amp; Fields!Part_PartNum.Value
+	, Fields!Part_gmsSortCode_c.Value &amp; "-" &amp; Fields!Part_PartNum.Value, Fields!Part_gmsSortCode_c.Value, "LYTD"), CountDistinct, Nothing)</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                   </Style>
@@ -1314,7 +1359,7 @@ FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox41</rd:DefaultName>
+                          <rd:DefaultName>Textbox5</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1326,6 +1371,7 @@ FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -1382,9 +1428,9 @@ FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
             <RepeatColumnHeaders>true</RepeatColumnHeaders>
             <DataSetName>BAQReportResult</DataSetName>
             <Top>0.36292in</Top>
-            <Left>0.20152in</Left>
+            <Left>0.00708in</Left>
             <Height>0.53125in</Height>
-            <Width>9.13097in</Width>
+            <Width>8.48514in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1399,7 +1445,7 @@ FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
           </Border>
         </Style>
       </Body>
-      <Width>9.3325in</Width>
+      <Width>8.49222in</Width>
       <Page>
         <PageHeader>
           <Height>0.69833in</Height>
@@ -1802,6 +1848,22 @@ FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
         Return filterValue
 
     End Function
+
+Function SumLookup(ByVal items As Object()) As Decimal
+If items Is Nothing Then
+Return Nothing
+End If
+Dim suma As Decimal = New Decimal()
+Dim ct as Integer = New Integer()
+suma = 0
+ct = 0
+For Each item As Object In items
+suma += Convert.ToDecimal(item)
+ct += 1
+Next
+If (ct = 0) Then return 0 else return suma 
+End Function
+
 </Code>
   <Language>=User!Language</Language>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
