@@ -678,6 +678,10 @@ FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
           <DataField>SortBy</DataField>
           <rd:UserDefined>true</rd:UserDefined>
         </Field>
+        <Field Name="Number01">
+          <DataField>Number01</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
       </Fields>
     </DataSet>
     <DataSet Name="LYTD">
@@ -1033,7 +1037,7 @@ FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -1359,7 +1363,7 @@ FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -1442,6 +1446,9 @@ Fields!ShipHead_Company.Value)</Value>
                       <Direction>Descending</Direction>
                     </SortExpression>
                   </SortExpressions>
+                  <Visibility>
+                    <Hidden>=Fields!Number01.Value &gt; 0 And RunningValue(Fields!Part_gmsSortCode_c.Value, CountDistinct, Nothing) &gt; Fields!Number01.Value</Hidden>
+                  </Visibility>
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
