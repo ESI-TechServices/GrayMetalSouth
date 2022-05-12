@@ -561,7 +561,8 @@
 
 FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
 	Inner Join dbo.[BAQReportParameter_" + Parameters!TableGuid.Value + "] rp on rr.[ShipHead_Company] = rp.[Cur-Comp] 
-	where rr.[InvcHead_InvoiceDate] &gt;= rp.Date01 AND rr.[InvcHead_InvoiceDate] &lt;= rp.Date02
+	where rr.[InvcHead_InvoiceDate] &gt;= rp.Date01 AND rr.[InvcHead_InvoiceDate] &lt;= rp.Date02 
+	and rr.[ShipTo_State] IN ('GA','VA','MD')
 "</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
