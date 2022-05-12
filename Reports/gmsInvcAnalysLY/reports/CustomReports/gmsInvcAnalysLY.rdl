@@ -555,14 +555,31 @@
     <DataSet Name="BAQReportResult">
       <Query>
         <DataSourceName>dsBAQReport</DataSourceName>
-        <CommandText>="SELECT [ShipHead_Company],[ShipHead_ShipDate],[Part_PartNum],[Part_PartDescription],[Calculated_ShippedQty],[RefCategory_RefCategory],[OrderDtl_UnitPrice],[Customer_CustID],[Customer_Name],[Customer_State],[ShipTo_Name],[ShipTo_City],[ShipTo_State],[Calculated_Revenue],[Calculated_Year],[Calculated_Month],[Calculated_InvcEOM],[ShipTo_ShipToNum],[Part_ProdCode],[InvcHead_InvoiceDate],[InvcDtl_InvoiceNum],[InvcDtl_SellingShipQty],[InvcDtl_UnitPrice],[Part_gmsSortCode_c] 
-, rp.Date01 As FromDate, rp.Date02 As ToDate
-, rp.Check01 As IncludeSales, rp.Check02 As IncludeZeroPrice, rp.Check03 As IncludeNonStock, rp.SortBy As SortBy, rp.Number01 
+        <CommandText>="
+IF (SELECT TOP 1 rp.Character05 
+	FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr 
+	Inner Join dbo.[BAQReportParameter_" + Parameters!TableGuid.Value + "] rp 
+	on rr.[ShipHead_Company] = rp.[Cur-Comp] ) 
+	= '' 
+BEGIN 
+	SELECT [ShipHead_Company],[ShipHead_ShipDate],[Part_PartNum],[Part_PartDescription],[Calculated_ShippedQty],[RefCategory_RefCategory],[OrderDtl_UnitPrice],[Customer_CustID],[Customer_Name],[Customer_State],[ShipTo_Name],[ShipTo_City],[ShipTo_State],[Calculated_Revenue],[Calculated_Year],[Calculated_Month],[Calculated_InvcEOM],[ShipTo_ShipToNum],[Part_ProdCode],[InvcHead_InvoiceDate],[InvcDtl_InvoiceNum],[InvcDtl_SellingShipQty],[InvcDtl_UnitPrice],[Part_gmsSortCode_c] 
+	, rp.Date01 As FromDate, rp.Date02 As ToDate
+	, rp.Check01 As IncludeSales, rp.Check02 As IncludeZeroPrice, rp.Check03 As IncludeNonStock, rp.SortBy As SortBy, rp.Number01 
 
-FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
-	Inner Join dbo.[BAQReportParameter_" + Parameters!TableGuid.Value + "] rp on rr.[ShipHead_Company] = rp.[Cur-Comp] 
-	where rr.[InvcHead_InvoiceDate] &gt;= rp.Date01 AND rr.[InvcHead_InvoiceDate] &lt;= rp.Date02 
-	and rr.[ShipTo_State] IN ('GA','VA','MD')
+	FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
+		Inner Join dbo.[BAQReportParameter_" + Parameters!TableGuid.Value + "] rp on rr.[ShipHead_Company] = rp.[Cur-Comp] 
+		where rr.[InvcHead_InvoiceDate] &gt;= rp.Date01 AND rr.[InvcHead_InvoiceDate] &lt;= rp.Date02 
+END 
+ELSE BEGIN 
+	SELECT [ShipHead_Company],[ShipHead_ShipDate],[Part_PartNum],[Part_PartDescription],[Calculated_ShippedQty],[RefCategory_RefCategory],[OrderDtl_UnitPrice],[Customer_CustID],[Customer_Name],[Customer_State],[ShipTo_Name],[ShipTo_City],[ShipTo_State],[Calculated_Revenue],[Calculated_Year],[Calculated_Month],[Calculated_InvcEOM],[ShipTo_ShipToNum],[Part_ProdCode],[InvcHead_InvoiceDate],[InvcDtl_InvoiceNum],[InvcDtl_SellingShipQty],[InvcDtl_UnitPrice],[Part_gmsSortCode_c] 
+	, rp.Date01 As FromDate, rp.Date02 As ToDate
+	, rp.Check01 As IncludeSales, rp.Check02 As IncludeZeroPrice, rp.Check03 As IncludeNonStock, rp.SortBy As SortBy, rp.Number01 
+
+	FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
+		Inner Join dbo.[BAQReportParameter_" + Parameters!TableGuid.Value + "] rp on rr.[ShipHead_Company] = rp.[Cur-Comp] 
+		where rr.[InvcHead_InvoiceDate] &gt;= rp.Date01 AND rr.[InvcHead_InvoiceDate] &lt;= rp.Date02 
+		and rr.[ShipTo_State] IN (SELECT * FROM [EpicorLive10].[Ice].[SplitDelimString](rp.Character05, ','))  
+END 
 "</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
@@ -688,11 +705,25 @@ FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr
     <DataSet Name="LYTD">
       <Query>
         <DataSourceName>dsBAQReport</DataSourceName>
-        <CommandText>="SELECT [Part_PartNum],[Part_gmsSortCode_c],[Calculated_ShippedQty],[Calculated_Revenue] 
-
-FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr 
-	Inner Join dbo.[BAQReportParameter_" + Parameters!TableGuid.Value + "] rp on rr.[ShipHead_Company] = rp.[Cur-Comp] 
-	where rr.[InvcHead_InvoiceDate] &gt;= DATEADD(year, -1, rp.Date01) AND rr.[InvcHead_InvoiceDate] &lt;= DATEADD(year, -1, rp.Date02)
+        <CommandText>=" 
+IF (SELECT TOP 1 rp.Character05 
+	FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr 
+	Inner Join dbo.[BAQReportParameter_" + Parameters!TableGuid.Value + "] rp 
+	on rr.[ShipHead_Company] = rp.[Cur-Comp] ) 
+	= '' 
+BEGIN 
+	SELECT [Part_PartNum],[Part_gmsSortCode_c],[Calculated_ShippedQty],[Calculated_Revenue] 
+	FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr 
+		Inner Join dbo.[BAQReportParameter_" + Parameters!TableGuid.Value + "] rp on rr.[ShipHead_Company] = rp.[Cur-Comp] 
+		where rr.[InvcHead_InvoiceDate] &gt;= DATEADD(year, -1, rp.Date01) AND rr.[InvcHead_InvoiceDate] &lt;= DATEADD(year, -1, rp.Date02)
+END 
+ELSE BEGIN 
+	SELECT [Part_PartNum],[Part_gmsSortCode_c],[Calculated_ShippedQty],[Calculated_Revenue] 
+	FROM dbo.[BAQReportResult_" + Parameters!TableGuid.Value + "] rr 
+		Inner Join dbo.[BAQReportParameter_" + Parameters!TableGuid.Value + "] rp on rr.[ShipHead_Company] = rp.[Cur-Comp] 
+		where rr.[InvcHead_InvoiceDate] &gt;= DATEADD(year, -1, rp.Date01) AND rr.[InvcHead_InvoiceDate] &lt;= DATEADD(year, -1, rp.Date02)
+		and rr.[ShipTo_State] IN (SELECT * FROM [EpicorLive10].[Ice].[SplitDelimString](rp.Character05, ','))  
+END 
 "</CommandText>
       </Query>
       <Fields>
@@ -2007,6 +2038,38 @@ Fields!ShipHead_Company.Value)</Value>
               <Height>0.1875in</Height>
               <Width>1in</Width>
               <ZIndex>17</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Character05">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>="Ship To State: " &amp; First(Fields!Character05.Value, "BAQReportParameter")</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Character05</rd:DefaultName>
+              <Top>0.76361in</Top>
+              <Left>6.13417in</Left>
+              <Height>0.1875in</Height>
+              <Width>1.53125in</Width>
+              <ZIndex>18</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
