@@ -1507,7 +1507,7 @@ Fields!ShipHead_Company.Value)</Value>
       <Width>8.49222in</Width>
       <Page>
         <PageHeader>
-          <Height>1.2175in</Height>
+          <Height>1.73833in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1745,8 +1745,8 @@ Fields!ShipHead_Company.Value)</Value>
               </Style>
             </Textbox>
             <Line Name="Line1">
-              <Top>1.16333in</Top>
-              <Left>0.00708in</Left>
+              <Top>1.66333in</Top>
+              <Left>0.02708in</Left>
               <Height>0in</Height>
               <Width>7.99292in</Width>
               <ZIndex>8</ZIndex>
@@ -1863,7 +1863,7 @@ Fields!ShipHead_Company.Value)</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Sum(Fields!Number01.Value, "BAQReportParameter")</Value>
+                      <Value>="Top: " &amp; Format(Sum(Fields!Number01.Value, "BAQReportParameter"), "#0")</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                       </Style>
@@ -1873,10 +1873,10 @@ Fields!ShipHead_Company.Value)</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Number01</rd:DefaultName>
-              <Top>0.35389in</Top>
-              <Left>1.08018in</Left>
+              <Top>1.11778in</Top>
+              <Left>0.20518in</Left>
               <Height>0.17708in</Height>
-              <Width>1in</Width>
+              <Width>1.24421in</Width>
               <ZIndex>12</ZIndex>
               <Style>
                 <Border>
@@ -1895,7 +1895,7 @@ Fields!ShipHead_Company.Value)</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=First(Fields!Check02.Value, "BAQReportParameter")</Value>
+                      <Value>="Include Zero Price: " &amp; First(Fields!Check02.Value, "BAQReportParameter")</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                       </Style>
@@ -1905,10 +1905,10 @@ Fields!ShipHead_Company.Value)</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Check02</rd:DefaultName>
-              <Top>0.54486in</Top>
-              <Left>1.08018in</Left>
+              <Top>0.66986in</Top>
+              <Left>0.20518in</Left>
               <Height>0.17708in</Height>
-              <Width>1in</Width>
+              <Width>1.82754in</Width>
               <ZIndex>13</ZIndex>
               <Style>
                 <Border>
@@ -1927,7 +1927,7 @@ Fields!ShipHead_Company.Value)</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=First(Fields!Check03.Value, "BAQReportParameter")</Value>
+                      <Value>="Include NonStock: " &amp; First(Fields!Check03.Value, "BAQReportParameter")</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                       </Style>
@@ -1937,43 +1937,11 @@ Fields!ShipHead_Company.Value)</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Check03</rd:DefaultName>
-              <Top>0.76361in</Top>
-              <Left>1.08018in</Left>
+              <Top>0.88861in</Top>
+              <Left>0.20518in</Left>
               <Height>0.1875in</Height>
-              <Width>1in</Width>
+              <Width>1.82754in</Width>
               <ZIndex>14</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Number011">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Sum(Fields!Number01.Value, "BAQReportParameter")</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Number011</rd:DefaultName>
-              <Top>0.76361in</Top>
-              <Left>2.32439in</Left>
-              <Height>0.1875in</Height>
-              <Width>1in</Width>
-              <ZIndex>15</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1991,7 +1959,7 @@ Fields!ShipHead_Company.Value)</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=First(Fields!Date01.Value, "BAQReportParameter")</Value>
+                      <Value>="Invoice Date From: " + Format(First(Fields!Date01.Value, "BAQReportParameter"), "MM/dd/yyyy")</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                       </Style>
@@ -2001,11 +1969,11 @@ Fields!ShipHead_Company.Value)</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Date01</rd:DefaultName>
-              <Top>0.76361in</Top>
-              <Left>3.58208in</Left>
+              <Top>0.63861in</Top>
+              <Left>2.20708in</Left>
               <Height>0.1875in</Height>
-              <Width>1in</Width>
-              <ZIndex>16</ZIndex>
+              <Width>1.64393in</Width>
+              <ZIndex>15</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -2023,7 +1991,7 @@ Fields!ShipHead_Company.Value)</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=First(Fields!Date02.Value, "BAQReportParameter")</Value>
+                      <Value>="Invoice Date To: " + Format(First(Fields!Date02.Value, "BAQReportParameter"), "MM/dd/yyyy")</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
                       </Style>
@@ -2033,11 +2001,11 @@ Fields!ShipHead_Company.Value)</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Date02</rd:DefaultName>
-              <Top>0.76361in</Top>
-              <Left>4.77925in</Left>
+              <Top>0.88861in</Top>
+              <Left>2.20708in</Left>
               <Height>0.1875in</Height>
-              <Width>1in</Width>
-              <ZIndex>17</ZIndex>
+              <Width>1.64393in</Width>
+              <ZIndex>16</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -2065,11 +2033,171 @@ Fields!ShipHead_Company.Value)</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Character05</rd:DefaultName>
-              <Top>0.76361in</Top>
-              <Left>6.13417in</Left>
+              <Top>1.14555in</Top>
+              <Left>2.20708in</Left>
               <Height>0.1875in</Height>
               <Width>1.53125in</Width>
+              <ZIndex>17</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Check3">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>="Show Pricing: " &amp; First(Fields!Check01.Value, "BAQReportParameter")</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Check02</rd:DefaultName>
+              <Top>0.49278in</Top>
+              <Left>0.20518in</Left>
+              <Height>0.17708in</Height>
+              <Width>1.82754in</Width>
               <ZIndex>18</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Filter2">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>="Group: " &amp; Mid(First(Fields!Filter2.Value, "BAQReportParameter"), instr(First(Fields!Filter2.Value, "BAQReportParameter") , "&lt;Part_ProdCode&gt;" )+15, instr(First(Fields!Filter2.Value, "BAQReportParameter"), "&lt;/Part_ProdCode&gt;" ) - instr(First(Fields!Filter2.Value, "BAQReportParameter"), "&lt;Part_ProdCode&gt;")-15 )</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Filter2</rd:DefaultName>
+              <Top>0.66388in</Top>
+              <Left>4.11333in</Left>
+              <Height>0.18306in</Height>
+              <Width>3.08333in</Width>
+              <ZIndex>19</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Filter3">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>="Cust ID: " &amp; Microsoft.VisualBasic.Strings.Mid(First(Fields!Filter2.Value, "BAQReportParameter"), Microsoft.VisualBasic.Strings.instr(First(Fields!Filter2.Value, "BAQReportParameter"), "&lt;Customer_CustID&gt;") + 17, Microsoft.VisualBasic.Strings.instr(First(Fields!Filter2.Value, "BAQReportParameter"), "&lt;/Customer_CustID&gt;") - Microsoft.VisualBasic.Strings.instr(First(Fields!Filter2.Value, "BAQReportParameter"), "&lt;Customer_CustID&gt;") - 17)</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Filter2</rd:DefaultName>
+              <Top>0.89305in</Top>
+              <Left>4.11334in</Left>
+              <Height>0.18306in</Height>
+              <Width>3.08333in</Width>
+              <ZIndex>20</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Filter4">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>="ShipTo Num: " &amp; Microsoft.VisualBasic.Strings.Mid(First(Fields!Filter2.Value, "BAQReportParameter"), Microsoft.VisualBasic.Strings.instr(First(Fields!Filter2.Value, "BAQReportParameter"), "&lt;ShipTo_ShipToNum&gt;") + 18, Microsoft.VisualBasic.Strings.instr(First(Fields!Filter2.Value, "BAQReportParameter"), "&lt;/ShipTo_ShipToNum&gt;") - Microsoft.VisualBasic.Strings.instr(First(Fields!Filter2.Value, "BAQReportParameter"), "&lt;ShipTo_ShipToNum&gt;") - 18)</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Filter2</rd:DefaultName>
+              <Top>1.11778in</Top>
+              <Left>4.11334in</Left>
+              <Height>0.18306in</Height>
+              <Width>3.08333in</Width>
+              <ZIndex>21</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Filter5">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>="Part Number: " &amp; Microsoft.VisualBasic.Strings.Mid(First(Fields!Filter2.Value, "BAQReportParameter"), Microsoft.VisualBasic.Strings.instr(First(Fields!Filter2.Value, "BAQReportParameter"), "&lt;Part_PartNum&gt;") + 14, Microsoft.VisualBasic.Strings.instr(First(Fields!Filter2.Value, "BAQReportParameter"), "&lt;/Part_PartNum&gt;") - Microsoft.VisualBasic.Strings.instr(First(Fields!Filter2.Value, "BAQReportParameter"), "&lt;Part_PartNum&gt;") - 14)</Value>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Filter2</rd:DefaultName>
+              <Top>1.35639in</Top>
+              <Left>4.11334in</Left>
+              <Height>0.18306in</Height>
+              <Width>3.08333in</Width>
+              <ZIndex>22</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
