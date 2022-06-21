@@ -1507,7 +1507,7 @@ Fields!ShipHead_Company.Value)</Value>
       <Width>8.49222in</Width>
       <Page>
         <PageHeader>
-          <Height>1.73833in</Height>
+          <Height>1.8425in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1530,9 +1530,9 @@ Fields!ShipHead_Company.Value)</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Left>6.49in</Left>
+              <Left>6.63573in</Left>
               <Height>0.17in</Height>
-              <Width>0.84in</Width>
+              <Width>0.56927in</Width>
               <Style>
                 <Border />
                 <BackgroundColor>White</BackgroundColor>
@@ -1558,9 +1558,9 @@ Fields!ShipHead_Company.Value)</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.18in</Top>
-              <Left>7.34in</Left>
+              <Left>7.215in</Left>
               <Height>0.17in</Height>
-              <Width>0.66in</Width>
+              <Width>0.785in</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border />
@@ -1586,9 +1586,9 @@ Fields!ShipHead_Company.Value)</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Left>7.34in</Left>
+              <Left>7.215in</Left>
               <Height>0.17in</Height>
-              <Width>0.66in</Width>
+              <Width>0.785in</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <Border />
@@ -1615,9 +1615,9 @@ Fields!ShipHead_Company.Value)</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.18in</Top>
-              <Left>6.49in</Left>
+              <Left>6.63573in</Left>
               <Height>0.17in</Height>
-              <Width>0.84in</Width>
+              <Width>0.56927in</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border />
@@ -1644,9 +1644,9 @@ Fields!ShipHead_Company.Value)</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.37778in</Top>
-              <Left>6.49in</Left>
+              <Left>6.63573in</Left>
               <Height>0.17in</Height>
-              <Width>0.84in</Width>
+              <Width>0.56927in</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border />
@@ -1673,9 +1673,9 @@ Fields!ShipHead_Company.Value)</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.37778in</Top>
-              <Left>7.34in</Left>
+              <Left>7.215in</Left>
               <Height>0.17in</Height>
-              <Width>0.68in</Width>
+              <Width>0.805in</Width>
               <ZIndex>5</ZIndex>
               <Style>
                 <Border />
@@ -1745,7 +1745,7 @@ Fields!ShipHead_Company.Value)</Value>
               </Style>
             </Textbox>
             <Line Name="Line1">
-              <Top>1.66333in</Top>
+              <Top>1.78833in</Top>
               <Left>0.02708in</Left>
               <Height>0in</Height>
               <Width>7.99292in</Width>
@@ -1814,7 +1814,7 @@ Fields!ShipHead_Company.Value)</Value>
               <Top>0.17in</Top>
               <Left>0.08611in</Left>
               <Height>0.17in</Height>
-              <Width>1.16542in</Width>
+              <Width>1.75917in</Width>
               <ZIndex>10</ZIndex>
               <Style>
                 <Border />
@@ -1873,75 +1873,11 @@ Fields!ShipHead_Company.Value)</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Number01</rd:DefaultName>
-              <Top>1.11778in</Top>
-              <Left>0.20518in</Left>
+              <Top>0.64209in</Top>
+              <Left>1.83208in</Left>
               <Height>0.17708in</Height>
               <Width>1.24421in</Width>
               <ZIndex>12</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Check02">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>="Include Zero Price: " &amp; First(Fields!Check02.Value, "BAQReportParameter")</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Check02</rd:DefaultName>
-              <Top>0.66986in</Top>
-              <Left>0.20518in</Left>
-              <Height>0.17708in</Height>
-              <Width>1.82754in</Width>
-              <ZIndex>13</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Check03">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>="Include NonStock: " &amp; First(Fields!Check03.Value, "BAQReportParameter")</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Check03</rd:DefaultName>
-              <Top>0.88861in</Top>
-              <Left>0.20518in</Left>
-              <Height>0.1875in</Height>
-              <Width>1.82754in</Width>
-              <ZIndex>14</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1969,11 +1905,11 @@ Fields!ShipHead_Company.Value)</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Date01</rd:DefaultName>
-              <Top>0.63861in</Top>
-              <Left>2.20708in</Left>
+              <Top>0.88861in</Top>
+              <Left>1.83208in</Left>
               <Height>0.1875in</Height>
               <Width>1.64393in</Width>
-              <ZIndex>15</ZIndex>
+              <ZIndex>13</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -2001,11 +1937,11 @@ Fields!ShipHead_Company.Value)</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Date02</rd:DefaultName>
-              <Top>0.88861in</Top>
-              <Left>2.20708in</Left>
+              <Top>1.13861in</Top>
+              <Left>1.83208in</Left>
               <Height>0.1875in</Height>
               <Width>1.64393in</Width>
-              <ZIndex>16</ZIndex>
+              <ZIndex>14</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -2033,43 +1969,14 @@ Fields!ShipHead_Company.Value)</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Character05</rd:DefaultName>
-              <Top>1.14555in</Top>
-              <Left>2.20708in</Left>
+              <Top>0.63167in</Top>
+              <Left>0.08611in</Left>
               <Height>0.1875in</Height>
               <Width>1.53125in</Width>
-              <ZIndex>17</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Check3">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>="Show Pricing: " &amp; First(Fields!Check01.Value, "BAQReportParameter")</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Check02</rd:DefaultName>
-              <Top>0.49278in</Top>
-              <Left>0.20518in</Left>
-              <Height>0.17708in</Height>
-              <Width>1.82754in</Width>
-              <ZIndex>18</ZIndex>
+              <ZIndex>15</ZIndex>
+              <Visibility>
+                <Hidden>true</Hidden>
+              </Visibility>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -2098,10 +2005,10 @@ Fields!ShipHead_Company.Value)</Value>
               </Paragraphs>
               <rd:DefaultName>Filter2</rd:DefaultName>
               <Top>0.66388in</Top>
-              <Left>4.11333in</Left>
+              <Left>3.86333in</Left>
               <Height>0.18306in</Height>
-              <Width>3.08333in</Width>
-              <ZIndex>19</ZIndex>
+              <Width>3.9375in</Width>
+              <ZIndex>16</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -2130,10 +2037,10 @@ Fields!ShipHead_Company.Value)</Value>
               </Paragraphs>
               <rd:DefaultName>Filter2</rd:DefaultName>
               <Top>0.89305in</Top>
-              <Left>4.11334in</Left>
+              <Left>3.86334in</Left>
               <Height>0.18306in</Height>
-              <Width>3.08333in</Width>
-              <ZIndex>20</ZIndex>
+              <Width>3.9375in</Width>
+              <ZIndex>17</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -2161,11 +2068,11 @@ Fields!ShipHead_Company.Value)</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Filter2</rd:DefaultName>
-              <Top>1.11778in</Top>
-              <Left>4.11334in</Left>
+              <Top>1.39111in</Top>
+              <Left>1.83208in</Left>
               <Height>0.18306in</Height>
-              <Width>3.08333in</Width>
-              <ZIndex>21</ZIndex>
+              <Width>5.96875in</Width>
+              <ZIndex>18</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -2176,7 +2083,7 @@ Fields!ShipHead_Company.Value)</Value>
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="Filter5">
+            <Textbox Name="Filter8">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
@@ -2193,11 +2100,11 @@ Fields!ShipHead_Company.Value)</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Filter2</rd:DefaultName>
-              <Top>1.35639in</Top>
-              <Left>4.11334in</Left>
+              <Top>1.13861in</Top>
+              <Left>3.86334in</Left>
               <Height>0.18306in</Height>
-              <Width>3.08333in</Width>
-              <ZIndex>22</ZIndex>
+              <Width>3.9375in</Width>
+              <ZIndex>19</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
