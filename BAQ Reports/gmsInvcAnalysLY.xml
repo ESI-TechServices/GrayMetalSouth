@@ -233,30 +233,6 @@
   <BAQRptFilter>
     <Company />
     <BAQRptID>gmsInvcAnalysLY</BAQRptID>
-    <DataTableID>ShipTo</DataTableID>
-    <FieldName>ShipToNum</FieldName>
-    <AdapterName>ShipToAdapter</AdapterName>
-    <Seq>3</Seq>
-    <LookupField>ShipToNum</LookupField>
-    <FilterLabel>Ship To</FilterLabel>
-    <TabLabel>Ship To</TabLabel>
-    <DisplayName>ShipTo_ShipToNum</DisplayName>
-    <EpiGuid>712a97c5-545c-4efe-9227-1b91eef88bf1</EpiGuid>
-    <IsVisible>false</IsVisible>
-    <FilterField />
-    <SystemFlag>false</SystemFlag>
-    <DispOrder>0</DispOrder>
-    <DataType>nvarchar</DataType>
-    <SysRevID>3085691419</SysRevID>
-    <SysRowID>43f74252-c8cc-46c0-ac4e-82aa724a4b40</SysRowID>
-    <TempRowID />
-    <FilterValue />
-    <BitFlag>0</BitFlag>
-    <RowMod />
-  </BAQRptFilter>
-  <BAQRptFilter>
-    <Company />
-    <BAQRptID>gmsInvcAnalysLY</BAQRptID>
     <DataTableID>Part</DataTableID>
     <FieldName>PartNum</FieldName>
     <AdapterName>PartAdapter</AdapterName>
