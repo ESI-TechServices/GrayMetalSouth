@@ -2051,38 +2051,6 @@ Fields!ShipHead_Company.Value)</Value>
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="Filter4">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>="ShipTo Num: " &amp; Microsoft.VisualBasic.Strings.Mid(First(Fields!Filter2.Value, "BAQReportParameter"), Microsoft.VisualBasic.Strings.instr(First(Fields!Filter2.Value, "BAQReportParameter"), "&lt;ShipTo_ShipToNum&gt;") + 18, Microsoft.VisualBasic.Strings.instr(First(Fields!Filter2.Value, "BAQReportParameter"), "&lt;/ShipTo_ShipToNum&gt;") - Microsoft.VisualBasic.Strings.instr(First(Fields!Filter2.Value, "BAQReportParameter"), "&lt;ShipTo_ShipToNum&gt;") - 18)</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Filter2</rd:DefaultName>
-              <Top>1.39111in</Top>
-              <Left>1.83208in</Left>
-              <Height>0.18306in</Height>
-              <Width>5.96875in</Width>
-              <ZIndex>18</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
             <Textbox Name="Filter8">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -2104,7 +2072,7 @@ Fields!ShipHead_Company.Value)</Value>
               <Left>3.86334in</Left>
               <Height>0.18306in</Height>
               <Width>3.9375in</Width>
-              <ZIndex>19</ZIndex>
+              <ZIndex>18</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -2133,10 +2101,10 @@ Fields!ShipHead_Company.Value)</Value>
               </Paragraphs>
               <rd:DefaultName>Option08</rd:DefaultName>
               <Top>1.39111in</Top>
-              <Left>3.86334in</Left>
+              <Left>1.83208in</Left>
               <Height>0.16069in</Height>
               <Width>1.22917in</Width>
-              <ZIndex>20</ZIndex>
+              <ZIndex>19</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
