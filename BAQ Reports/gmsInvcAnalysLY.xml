@@ -159,6 +159,29 @@
     <BitFlag>0</BitFlag>
     <RowMod />
   </BAQRptOptionFld>
+  <BAQRptOptionFld>
+    <Company />
+    <BAQRptID>gmsInvcAnalysLY</BAQRptID>
+    <DataTableID>ShipTo</DataTableID>
+    <FieldName>State</FieldName>
+    <CompOp>=</CompOp>
+    <Seq>8</Seq>
+    <DefaultValue />
+    <FieldLabel>Ship to State</FieldLabel>
+    <DisplayName>ShipTo_State</DisplayName>
+    <FieldFormat>x(50)</FieldFormat>
+    <EpiGuid>e3714731-936e-41ea-b80e-12cda0234486</EpiGuid>
+    <IsVisible>false</IsVisible>
+    <DataType>nvarchar</DataType>
+    <SystemFlag>false</SystemFlag>
+    <DispOrder>7</DispOrder>
+    <SysRevID>3085841635</SysRevID>
+    <SysRowID>d9b2c00b-1d27-41da-af81-4ed8d7907523</SysRowID>
+    <FieldValue />
+    <TempRowID />
+    <BitFlag>0</BitFlag>
+    <RowMod />
+  </BAQRptOptionFld>
   <BAQRptFilter>
     <Company />
     <BAQRptID>gmsInvcAnalysLY</BAQRptID>
@@ -224,7 +247,7 @@
     <SystemFlag>false</SystemFlag>
     <DispOrder>0</DispOrder>
     <DataType>nvarchar</DataType>
-    <SysRevID>3081849657</SysRevID>
+    <SysRevID>3085691419</SysRevID>
     <SysRowID>43f74252-c8cc-46c0-ac4e-82aa724a4b40</SysRowID>
     <TempRowID />
     <FilterValue />
